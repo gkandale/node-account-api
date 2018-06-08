@@ -1,5 +1,4 @@
 var mongoose = require('mongoose');
-
 var accounts = mongoose.model('accounts', {
     username: {
         type: String,
@@ -21,6 +20,12 @@ var accounts = mongoose.model('accounts', {
         minLength: 1,
         trim: true
     },
+    email: {
+        type: String,
+        unique: true,
+        required: true,
+        trim: true
+    },
     acountNumb: {
         type: String,
         required: true,
@@ -30,6 +35,5 @@ var accounts = mongoose.model('accounts', {
         unique: true
     }
 });
-
 
 module.exports = {accounts};

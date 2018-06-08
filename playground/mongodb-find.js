@@ -1,6 +1,8 @@
 //const MongoClient = require('mongodb').MongoClient;
+// noinspection JSUnresolvedFunction
 const { MongoClient, ObjectID } = require('mongodb');
 
+// noinspection JSUnresolvedFunction
 const keys = require('../config/keys');
 
 MongoClient.connect(keys.mongoURI,(err,client) => {
